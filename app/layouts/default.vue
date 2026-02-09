@@ -9,9 +9,9 @@
       <template v-slot:prepend>
         <v-list-item
           lines="two"
-          prepend-avatar="https://randomuser.me/api/portraits/women/81.jpg"
+          prepend-avatar="https://randomuser.me/api/portraits/men/81.jpg"
           subtitle="Logged in"
-          title="Jane Smith"
+          title="John Smith"
         ></v-list-item>
       </template>
 
