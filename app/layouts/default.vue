@@ -33,6 +33,12 @@
           title="Users"
           value="users"
         ></v-list-item>
+        <v-list-item
+          prepend-icon="mdi-account-group-outline"
+          title="Prelim Exam"
+          value="prelim"
+          to="/prelim"
+        ></v-list-item>
       </v-list>
     </v-navigation-drawer>
 
