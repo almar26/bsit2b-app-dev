@@ -8,6 +8,7 @@
           prepend-inner-icon="mdi-account"
           variant="outlined"
           label="Username"
+          v-model="username"
         ></v-text-field>
 
         <v-text-field
@@ -15,6 +16,7 @@
           variant="outlined"
           label="Password"
           type="password"
+          v-model="password"
         ></v-text-field>
 
         <v-btn block color="primary" @click="signIn">Sign In</v-btn>
@@ -28,7 +30,22 @@ definePageMeta({
   layout: "auth",
 });
 
+const username = ref("");
+const password = ref("");
+
+const defaultUsername = ref("admin");
+const defaultPassword = ref("admin123");
+
 function signIn() {
-  alert("Successfully signed in!");
+  //`alert("Successfully signed in!");`
+  //return navigateTo("/prelim");
+  if (
+    username.value === defaultUsername.value &&
+    password.value === defaultPassword.value
+  ) {
+    navigateTo("/calculate");
+  } else {
+    alert("Invalid username or password. Please try again.");
+  }
 }
 </script>
